@@ -2,7 +2,12 @@ import { LitElement, html, css } from "lit";
 class Myelement extends LitElement {
   constructor(){
     super()
-  }
+    this.title = "Money Machine";
+    this.description = "1000 Gecks";
+    this.background = "src/assets/notificationwallpaper.jpg"; 
+    this.album = '/src/assets/album.png'; 
+}
+
   static styles = css`
 
     * {
@@ -100,19 +105,19 @@ class Myelement extends LitElement {
     return html`
       <div class="notification">
           
-      <div class="atras"><img src="/src/assets/atras.svg"></div>
+        <div class="atras"><img src="/src/assets/atras.svg"></div>
 
-      <div class="center">
-          <img src="/src/assets/album.png">
-          <h2>Demon Days</h2>
-          <h3>Gorillaz</h3>
+        <div class="center">
+          <img src="${this.album}" />
+          <h2>${this.title}</h2>
+          <h3>${this.description}</h3>
 
           <div class="buttons">
               <img src="/src/assets/anterior.svg">
               <img src="/src/assets/play.svg" class="play">
               <img src="/src/assets/siguiente.svg">
           </div>
-      </div>
+        </div>
       </div>
     `
   }
