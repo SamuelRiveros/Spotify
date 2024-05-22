@@ -1,11 +1,12 @@
 import { LitElement, html, css } from "lit";
-class Myelement extends LitElement {
+
+class Mynotification extends LitElement {
   constructor(){
     super()
     this.title = "Money Machine";
     this.description = "1000 Gecks";
-    this.background = "src/assets/notificationwallpaper.jpg"; 
-    this.album = '/src/assets/album.png'; 
+    this.background = "/notificationwallpaper.jpg"; 
+    this.album = '/album.png'; 
 }
 
   static styles = css`
@@ -126,4 +127,4 @@ class Myelement extends LitElement {
   }
 }
 
-customElements.define("my-element", Myelement);
+customElements.define("my-notification", Mynotification);
