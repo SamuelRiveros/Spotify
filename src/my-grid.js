@@ -8,6 +8,12 @@ import { Cardnewmusic } from "./newMusic";
 import { myTrack } from "./my-track";
 customElements.define('my-track', myTrack);
 
+import { Reproductor } from "./reproductor";
+customElements.define('my-reproductor', Reproductor);
+
+import { TrackList } from "./my-track-list";
+customElements.define('my-trcklist', TrackList);
+
 
 
 class myGrid extends LitElement {
@@ -28,7 +34,8 @@ class myGrid extends LitElement {
         grid-template-rows: 1fr;
     }
     .main__aside{
-        background: #2B2D42;
+        height: 100vh;
+        background: #dfdfdf;
         padding: 10px;
         display: grid;
         grid-template-rows: 130px 1fr 130px
@@ -43,7 +50,9 @@ class myGrid extends LitElement {
         
     }
     .main__section1{
-        background: #EC9A29;
+        height: 100vh;
+        background: white;
+        box-shadow: 9px 0 20px -20px;
     }
 
     .main__section1 h1{
@@ -57,14 +66,28 @@ class myGrid extends LitElement {
         padding: 0 5%;
     }
 
-    .main__section2{
-        background: #EF233C;
+    .youmaylike h2{
+        margin: 15px;
     }
+
     .main__section2{
-        background: #35A7FF;
+        height: 100vh;
+        z-index: -1
     }
+
     .main__section3{
-        background: #E8E9ED;
+        height: 100vh;
+        overflow-y: scroll;
+        background: white;
+        box-shadow: 10px 10px 20px;
+    }
+
+    .trcklist {
+        overflow-y: scroll;
+    }
+
+    .tracklistupper {
+        margin-left: 20px;
     }
 
 
@@ -110,15 +133,21 @@ class myGrid extends LitElement {
             <my-track></my-track>
             
             </section>
-            <section class="main__section2"></section>
-            <section class="main__section3"></section>
+            <section class="main__section2">
+            <my-reproductor><my-reproductor>
+            
+            </section>
+            <section class="main__section3">
+            <div class="tracklistupper"> 
+            <h1>Track List</h1>
+            <h2>Playing Next</h2>
+            <div>
+
+            <my-trcklist class="trcklist"></my-trcklist>
+            </section>
         </main>
         `
     }
 }
 
 customElements.define("my-grid" , myGrid)
-
-
-
-customElements.define('my-track', myTrack);

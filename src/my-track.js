@@ -18,7 +18,7 @@ export class myTrack extends LitElement{
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'd2393662cbmsh5c9d57297695353p150c95jsned1b87aca971',
+        'X-RapidAPI-Key': '3d084e9cb9msh321ad15ea5c2f1ep11ef4ajsn46038ca7ad66',
         'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
       }
     };
@@ -62,7 +62,7 @@ export class myTrack extends LitElement{
 
   static styles = css`
   .padre{
-    height: 300px;
+    height: 150px;
     overflow-y: scroll;
   }
   .card {

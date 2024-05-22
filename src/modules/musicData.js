@@ -2,7 +2,7 @@ const url = 'https://spotify23.p.rapidapi.com/recommendations/?limit=20&seed_tra
 const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '0a652d3c4dmsh05ccee5ed0055aap1a26f4jsncf6d90adb8e8',
+            'X-RapidAPI-Key': '3d084e9cb9msh321ad15ea5c2f1ep11ef4ajsn46038ca7ad66',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
         }
     };
