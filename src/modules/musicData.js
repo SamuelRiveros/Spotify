@@ -2,7 +2,7 @@ const url = 'https://spotify23.p.rapidapi.com/recommendations/?limit=20&seed_tra
 const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'e6cf14c6famsh4d970da491ed55cp1625a6jsnadb2f9835b47',
+            'X-RapidAPI-Key': '0a652d3c4dmsh05ccee5ed0055aap1a26f4jsncf6d90adb8e8',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
         }
     };
@@ -19,10 +19,4 @@ export const sortSongsForPopularity = () => {
     const sortedSongs = data.tracks
     sortedSongs.sort((a, b) => b.popularity - a.popularity)
     return sortedSongs
-}
-
-export const releaseYear = (data) => {
-    const releaseDateFull = data.album.release_date
-    const year = new Date(releaseDateFull).getFullYear()
-    return year
 }

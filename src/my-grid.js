@@ -3,6 +3,12 @@ import { LitElement, html, css } from "lit";
 import { MyLeftBar } from "./my-left-bar";
 customElements.define('my-left-bar', MyLeftBar);
 
+import { Cardnewmusic } from "./newMusic";
+
+import { myTrack } from "./my-track";
+customElements.define('my-track', myTrack);
+
+
 
 class myGrid extends LitElement {
 
@@ -39,6 +45,18 @@ class myGrid extends LitElement {
     .main__section1{
         background: #EC9A29;
     }
+
+    .main__section1 h1{
+        font-size: 3em;
+        margin-left: 5%
+    }
+
+    .top__chart__title{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+
     .main__section2{
         background: #EF233C;
     }
@@ -48,6 +66,8 @@ class myGrid extends LitElement {
     .main__section3{
         background: #E8E9ED;
     }
+
+
     @media (max-width: 849px){
         .main{
             grid-template-columns: 1fr;
@@ -75,7 +95,21 @@ class myGrid extends LitElement {
             <my-left-bar></my-left-bar>
             </aside>
 
-            <section class="main__section1"></section>
+            <section class="main__section1">
+                <h1>Discover<br>New music</h1>
+                    <div class="top__chart__title">
+                        <h2>Top-chart</h2><h2>Week</h2>
+                    </div>
+
+            <new-music></new-music>
+
+                <div class="youmaylike">
+                    <h2>You may Like</h2>
+                </div>
+
+            <my-track></my-track>
+            
+            </section>
             <section class="main__section2"></section>
             <section class="main__section3"></section>
         </main>
@@ -84,6 +118,7 @@ class myGrid extends LitElement {
 }
 
 customElements.define("my-grid" , myGrid)
+
 
 
 customElements.define('my-track', myTrack);
